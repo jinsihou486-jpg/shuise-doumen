@@ -1,0 +1,14 @@
+.page { padding-top: 16px; padding-bottom: 32px; }
+.timeline { margin: 16px 0; }
+.step { margin-bottom: 16px; }
+.ways { display: flex; gap: 8px; }
+.card {
+  flex: 1;
+  border: 1px solid rgba(44, 95, 93, 0.28);
+  border-radius: 12px;
+  padding: 12px 8px;
+  box-shadow: var(--shadow);
+}
+.card.on { border-color: var(--qing); }
+.status { margin: 16px 0; }
+.nav { margin-top: 16px; }

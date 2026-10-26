@@ -1,0 +1,14 @@
+{
+  "description": "水色斗门",
+  "miniprogramRoot": "miniprogram/",
+  "projectname": "shuise-doumen",
+  "appid": "touristappid",
+  "setting": {
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "minified": false,
+    "urlCheck": false
+  },
+  "libVersion": "3.5.5"
+}

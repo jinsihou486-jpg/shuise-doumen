@@ -1,0 +1,3 @@
+.page { padding-top: 16px; padding-bottom: 32px; }
+.poster { width: 100%; height: 520px; background: #f4f1ec; border-radius: 12px; }
+.outline, .share { margin-top: 16px; display: block; text-align: center; }

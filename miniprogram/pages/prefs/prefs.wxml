@@ -1,0 +1,11 @@
+<view class="pad page">
+  <view class="h1 serif">你想先看见哪一种</view>
+  <view class="meta">最多选三个。河的颜色跟第一个走。</view>
+  <view class="list">
+    <view wx:for="{{list}}" wx:key="id" class="item {{item.on ? 'on' : ''}}" data-id="{{item.id}}" bindtap="toggle">{{item.name}}</view>
+  </view>
+  <view class="motion" bindtap="toggleMotion">
+    <text class="body">减弱动态</text>
+    <text class="meta">{{reduce ? '已打开' : '关闭'}}</text>
+  </view>
+</view>

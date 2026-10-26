@@ -1,0 +1,11 @@
+.page { padding-top: 24px; }
+.who { display: flex; align-items: center; gap: 16px; margin-bottom: 24px; }
+.avatar {
+  width: 64px; height: 64px; border-radius: 12px; padding: 0;
+  border: 1px solid var(--qing); background: transparent;
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.avatar::after { border: none; }
+.avatar image { width: 64px; height: 64px; }
+.name { flex: 1; }
+.block { margin-bottom: 16px; }

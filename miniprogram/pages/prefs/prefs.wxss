@@ -1,0 +1,10 @@
+.page { padding-top: 16px; }
+.list { margin-top: 16px; }
+.item {
+  padding: 12px 0;
+  color: var(--qing);
+  font-size: 17px;
+  font-family: "Songti SC", "SimSun", serif;
+}
+.item.on { color: var(--ink); }
+.motion { margin-top: 24px; display: flex; justify-content: space-between; }

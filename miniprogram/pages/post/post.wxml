@@ -1,0 +1,5 @@
+<view class="pad page">
+  <canvas type="2d" id="poster" class="poster"></canvas>
+  <button class="outline" bindtap="save">保存图片</button>
+  <button class="link share" open-type="share">发给朋友</button>
+</view>

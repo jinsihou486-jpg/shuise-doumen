@@ -1,0 +1,23 @@
+<view class="pad page">
+  <view class="who">
+    <button class="avatar" open-type="chooseAvatar" bindchooseavatar="onAvatar">
+      <image wx:if="{{avatar}}" src="{{avatar}}" mode="aspectFill"></image>
+      <text wx:else class="meta">头像</text>
+    </button>
+    <input class="h2 serif name" type="nickname" placeholder="怎么称呼" value="{{name}}" bindblur="onName"/>
+  </view>
+
+  <view class="block" bindtap="hall">
+    <view class="h2 serif">斗门文化馆</view>
+    <view class="meta">{{hall.address}}</view>
+    <view class="link">查看地址与公开介绍 →</view>
+  </view>
+  <view class="block" bindtap="prefs">
+    <view class="h2 serif">偏好</view>
+    <view class="meta">拍照、文化、风景、家庭、美食，最多三个</view>
+  </view>
+  <view class="block" bindtap="about">
+    <view class="h2 serif">关于水色斗门</view>
+    <view class="meta">这一版只把河走到现场</view>
+  </view>
+</view>

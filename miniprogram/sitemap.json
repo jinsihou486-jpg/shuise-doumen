@@ -1,0 +1,4 @@
+{
+  "desc": "水色斗门",
+  "rules": [{ "action": "allow", "page": "*" }]
+}

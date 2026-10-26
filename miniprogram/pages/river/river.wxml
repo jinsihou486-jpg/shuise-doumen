@@ -1,0 +1,83 @@
+<view class="page {{reduce ? 'reduce' : ''}}" style="--accent: {{accent}};">
+  <view
+    class="stage"
+    bindtouchstart="touchStart"
+    bindtouchend="touchEnd"
+  >
+    <view class="layer far motion"></view>
+    <view class="layer tree motion"></view>
+    <view class="layer boat-line motion"></view>
+    <view class="river-name serif">{{current.name}}</view>
+  </view>
+
+  <view class="glass">
+    <text class="meta">今日水语</text>
+    <view class="quote serif">{{quote}}</view>
+  </view>
+
+  <scroll-view class="thumbs" scroll-x enhanced show-scrollbar="{{false}}" scroll-into-view="bend-{{current.spotId}}">
+    <view
+      wx:for="{{spots}}"
+      wx:key="spotId"
+      id="bend-{{item.spotId}}"
+      class="thumb {{index === bend ? 'on' : ''}}"
+      data-index="{{index}}"
+      bindtap="openBend"
+    >
+      <text class="serif">{{item.name}}</text>
+      <text class="meta">{{item.waterColor === 'red' ? '渔火' : item.waterColor === 'blue' ? '咸水' : '荷粉'}}</text>
+    </view>
+  </scroll-view>
+
+  <view class="prefs">
+    <view
+      wx:for="{{prefList}}"
+      wx:key="id"
+      class="bubble {{item.on ? 'on' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="togglePref"
+    >{{item.name}}</view>
+  </view>
+
+  <button class="outline post-btn" bindtap="makePost">生成我的水上帖</button>
+
+  <view class="guide" wx:if="{{guideOn}}" bindtap="toggleGuide">灯</view>
+  <view class="bubble-talk" wx:if="{{guideOpen}}">
+    <view class="body">{{guideText}}</view>
+    <view class="talk-links">
+      <text bindtap="ask" data-kind="quote">今日水语</text>
+      <text bindtap="ask" data-kind="spot">这一弯</text>
+      <text bindtap="ask" data-kind="go">怎么去</text>
+      <text bindtap="toggleGuide">收起</text>
+    </view>
+  </view>
+
+  <view class="mask {{drawer ? 'show' : ''}}" bindtap="closeDrawer"></view>
+  <view class="drawer {{drawer ? 'show' : ''}} {{reduce ? 'reduce' : ''}}">
+    <view class="handle"></view>
+    <scroll-view scroll-y class="drawer-body">
+      <view class="block">
+        <view class="quote serif">{{current.songLine}}</view>
+        <text class="link" bindtap="playLine">播放这一句</text>
+      </view>
+      <view class="block">
+        <view class="h2 serif">它是什么</view>
+        <view class="body">{{current.what}}</view>
+      </view>
+      <view class="block">
+        <view class="h2 serif">它从哪来</view>
+        <view class="body">{{current.from}}</view>
+      </view>
+      <view class="block">
+        <view class="h2 serif">今天在哪能碰到</view>
+        <view class="body">{{current.today}}</view>
+        <view class="body">到了：{{current.onSite}}</view>
+      </view>
+      <view class="row-links">
+        <text class="link" bindtap="goThere">怎么去 →</text>
+        <text class="link" bindtap="savePost">存成帖 →</text>
+        <text class="link" bindtap="remind">下次提醒我 →</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

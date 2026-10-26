@@ -1,0 +1,27 @@
+<view class="page {{reduce ? 'reduce' : ''}}">
+  <map
+    id="doumen"
+    class="map"
+    longitude="{{lng}}"
+    latitude="{{lat}}"
+    scale="11"
+    markers="{{markers}}"
+    bindmarkertap="openCard"
+    show-location
+  ></map>
+  <view class="mask {{card ? 'show' : ''}}" bindtap="close"></view>
+  <view class="drawer {{card ? 'show' : ''}}">
+    <view class="handle"></view>
+    <view class="pad" wx:if="{{spot}}">
+      <view class="h1 serif">{{spot.name}}</view>
+      <view class="body">{{spot.what}}</view>
+      <view class="meta">可做：{{spot.onSite}}</view>
+      <view class="meta">费用 {{spot.cost}} · {{spot.duration}}</view>
+      <view class="row">
+        <text class="link" bindtap="goThere">怎么去 →</text>
+        <text class="link" bindtap="save">{{saved ? '已收藏' : '收藏 →'}}</text>
+        <text class="link" bindtap="nav">导航 →</text>
+      </view>
+    </view>
+  </view>
+</view>

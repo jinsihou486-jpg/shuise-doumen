@@ -1,0 +1,5 @@
+<view class="splash {{reduce ? 'reduce' : ''}}" bindtouchstart="touchStart" bindtouchend="touchEnd">
+  <view class="word serif">斗门</view>
+  <view class="mist motion"></view>
+  <view class="hint meta">上滑进入</view>
+</view>

@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/splash/splash",
+    "pages/river/river",
+    "pages/map/map",
+    "pages/mine/mine",
+    "pages/go/go",
+    "pages/post/post",
+    "pages/prefs/prefs",
+    "pages/about/about"
+  ],
+  "window": {
+    "navigationBarTitleText": "水色斗门",
+    "navigationBarBackgroundColor": "#F4F1EC",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F4F1EC",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#6d7470",
+    "selectedColor": "#2C5F5D",
+    "backgroundColor": "#F4F1EC",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/river/river",
+        "text": "寻河",
+        "iconPath": "images/tab-river.png",
+        "selectedIconPath": "images/tab-river-on.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "iconPath": "images/tab-map.png",
+        "selectedIconPath": "images/tab-map-on.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tab-mine.png",
+        "selectedIconPath": "images/tab-mine-on.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}
